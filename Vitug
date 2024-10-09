@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart'; //imports pre-built widgets
+class Counter extends StatelessWidget { //main method - panimula point of the flutter program
+  const Counter({super.key});
+
+  @override
+  Widget build(BuildContext context) { //gitna ng widget
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        ElevatedButton(
+          onPressed: (){ //convert ang stateful widget sa stateless
+            print('Pindutin mona sir');
+            },
+          child: const Text('Increment'),
+        ),
+      ],
+    );
+  }
+}
+
+void main() {
+  runApp(
+    const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Counter(),
+        ),
+      ),
+    ),
+  );
+}
